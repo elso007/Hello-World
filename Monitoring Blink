@@ -1,0 +1,32 @@
+int led = 13;
+
+bool ledState;
+
+unsigned long currentTime;
+
+void setup() {
+
+pinMode(led, OUTPUT);
+Serial.begin(9600); 
+}
+
+void loop() {
+ledState = HIGH; 
+currentTime = millis(); 
+turned on
+digitalWrite(led, ledState); 
+
+Serial.print(ledState);
+Serial.print("\t");
+Serial.println(currentTime);
+delay(1000); 
+ledState = 0;
+currentTime = millis();
+turned on
+digitalWrite(led, ledState);
+
+Serial.print(ledState);
+Serial.print("\t");
+Serial.println(currentTime);
+delay(1000); 
+}
